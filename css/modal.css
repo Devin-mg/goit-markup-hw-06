@@ -27,8 +27,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 408px;
-  padding: 72px 24px 24px;
+  width: 288px;
+  padding: 72px 16px 24px;
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow:
@@ -248,4 +248,13 @@
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: #404bbf;
+}
+
+/* ===== Tablet and desktop ===== */
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 408px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }

@@ -1,22 +1,12 @@
+/* ===== Mobile (base) ===== */
 .features-list {
   display: flex;
-  gap: 24px;
-}
-
-.features-item {
-  width: calc((100% - 72px) / 4);
+  flex-direction: column;
+  gap: 72px;
 }
 
 .features-icon-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 112px;
-  margin-bottom: 8px;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  color: #2e2f42;
-  background-color: #f4f4fd;
+  display: none;
 }
 
 .features-icon {
@@ -25,4 +15,56 @@
 
 .features-item .card-title {
   margin-bottom: 8px;
+}
+
+/* ===== Mobile + tablet only: big titles, medium text ===== */
+@media screen and (max-width: 1157px) {
+  .features-item .card-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+
+  .features-item p {
+    font-weight: 500;
+  }
+}
+
+/* ===== Mobile only: centered titles ===== */
+@media screen and (max-width: 767px) {
+  .features-item .card-title {
+    text-align: center;
+  }
+}
+
+/* ===== Tablet ===== */
+@media screen and (min-width: 768px) {
+  .features-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+/* ===== Desktop ===== */
+@media screen and (min-width: 1158px) {
+  .features-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+
+  .features-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    margin-bottom: 8px;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    color: #2e2f42;
+    background-color: #f4f4fd;
+  }
 }
